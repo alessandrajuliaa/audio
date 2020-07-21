@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Áudio</title>
+
+    <style>
+        #container{
+            width: 520px;
+            height: 60px;
+            background-color: black;
+            margin: auto;
+            border-radius: 10px;
+        }
+        #audio{
+            width: 100%;
+        }
+        #controle{
+            width: 100%;
+            height: 100%;
+            position: relative;
+            text-align: center;
+        }
+        .btn{
+            position: relative;
+            top: 100%;
+            width: 50px;
+            transform: translateY(-100%);
+            margin: 0;
+            padding: 5px 15px;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <audio id="audio">
+            <source src="./audio/Ir Sais, Rauw Alejandro - Dream Girl (Remix - Official Video).ogg" type="audio/ogg">
+            <source src="./audio/Ir Sais, Rauw Alejandro - Dream Girl (Remix - Official Video).mp3" type="audio/mpeg">
+        </audio>
+        <div id="controle">
+            <img onclick="voltar()" class="btn" src="./img/btn_15_Backward.svg" alt="Voltar Segundos">
+            <img onclick="avancar()" class="btn" src="./img/btn_15_Forward.svg" alt="Avançar Segundos">
+            <img onclick="diminuirVel()" class="btn" src="./img/btn_Menos.svg" alt="Diminuir Velocidade">
+            <img onclick="aumentarVel()" class="btn" src="./img/btn_Mais.svg" alt="Aumentar Velocidade">
+            <img onclick="play()" class="btn" src="./img/btn_Play.svg" alt="Play">
+            <img onclick="pause()" class="btn" src="./img/btn_Pause.svg" alt="Pause">
+        </div>
+    </div>
+
+    <script src="./script.js"></script>
+</body>
+</html>
